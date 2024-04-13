@@ -1,1 +1,14 @@
+Metrica LOC: Pentru metrica LOC am calculat in doua moduri:
 
+1. Am luat in calcul doar liniile de cod(excluzand liniile cu comentarii si cele goale)
+
+  Fisier Calculator.java
+    Linii de cod: 77
+
+  Fisier: Start.java
+     Linii de cod: 20
+
+  Metrica LOC Colectiv:
+    Total: 77 (Calculator.java) + 20 (Start.java) = 97 linii de cod
+
+2. 
