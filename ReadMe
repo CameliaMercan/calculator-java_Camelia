@@ -24,3 +24,20 @@ Metrica LOC: Pentru metrica LOC am calculat in doua moduri:
 
 
 
+Metoda evaluateExpression pentru: calculator.java:
+      1. Complexitatea ciclomatica: 6
+      2. Complexitatea cognitiva: Moderat
+
+Metoda Calculate pentru: calculator.java
+      1. Complexitatea ciclomatica: 10
+      2. Complexitatea cognitiva: Ridicata
+
+Metoda evaluateExpression pentru: start.java:
+      1. Complexitatea ciclomatica: 6
+      2. Complexitatea cognitiva: Moderat
+
+Metoda Calculate pentru: start.java
+      1. Complexitatea ciclomatica: 10
+      2. Complexitatea cognitiva: Ridicata
+
+
