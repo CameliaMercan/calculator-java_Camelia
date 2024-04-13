@@ -23,7 +23,6 @@ Metrica LOC: Pentru metrica LOC am calculat in doua moduri:
           Total: 124 (Calculator.java) + 39 (Start.java) = 163 linii de cod
 
 
-
 Metoda evaluateExpression pentru: calculator.java:
       1. Complexitatea ciclomatica: 6
       2. Complexitatea cognitiva: Moderat
@@ -39,5 +38,14 @@ Metoda evaluateExpression pentru: start.java:
 Metoda Calculate pentru: start.java
       1. Complexitatea ciclomatica: 10
       2. Complexitatea cognitiva: Ridicata
+
+
+
+Linia 5: static float finalResult; - Variabilele de tip float sunt sensibile la erori de precizie în calculele aritmetice, mai ales când sunt folosite în bucle sau alte operații repetitive. În unele cazuri, ar fi mai sigur să se utilizeze double.
+Linia 10: static class Operations { - Nu există o justificare clară pentru a face clasa Operations statică încorporată în Calculator. S-ar putea lua în considerare mutarea acestei clase în afara clasei Calculator sau transformarea sa într-o clasă non-statică.
+Linia 18: public static String ToString() { - Numele metodei (ToString) nu respectă convențiile de denumire Java, care ar trebui să fie toString(). De asemenea, este ciudat să aibă o metodă numită toString care întoarce un șir de caractere care reprezintă simbolurile de operație. Ar putea fi mai bine să se folosească o metodă numită mai explicit, cum ar fi getOperationsAsString().
+Linia 33: for (int i = 0; i < expression.length() - 1; i++) { - Acesta este un exemplu de unde s-ar putea face o greșeală subtilă. Probabil că ar fi mai sigur să fie i < expression.length() pentru a evita depășirea limitelor.
+Linia 44: for (int i = 0; i < numbers.length; i++) { - Aici, în mod similar, s-ar putea folosi i < numbers.length în loc de i < numbers.length - 1.
+Linia 51: try { numberList.add(Float.parseFloat(numbers[i])); } catch (Exception exc) { return "ERROR"; } - Capturarea oricărei excepții fără a face o manipulare adecvată a acesteia (cum ar fi afișarea unui mesaj de eroare) poate ascunde problemele din cod și poate face depanarea dificilă.
 
 
