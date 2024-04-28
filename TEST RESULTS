@@ -11,3 +11,66 @@
 5. Programul genereaza rezultate incorecte in cazul expresiilor de forma "12.5/0x3". Daca inlocuim simbolul "*" cu "x", calculatorul nu identifica eroarea corect si omite partea "0x", efectuand direct impartirea "12.5/3".
 
 
+*****UNIT TEST - Am generat un test pentru fiecare tip de operatie aritmetica:
+
+public class CalculatorTest {
+
+    public static void main(String[] args) {
+        testAddition();
+        testSubtraction();
+        testMultiplication();
+        testDivision();
+    }
+
+    public static void testAddition() {
+        String expression = "5+3";
+        double expectedResult = 8.0;
+
+        String actualResult = Calculator.Run(expression);
+
+        if (Double.parseDouble(actualResult) == expectedResult) {
+            System.out.println("Addition test - PASSED");
+        } else {
+            System.out.println("Addition test - FAILED");
+        }
+    }
+
+    public static void testSubtraction() {
+        String expression = "10-4";
+        double expectedResult = 6.0;
+
+        String actualResult = Calculator.Run(expression);
+
+        if (Double.parseDouble(actualResult) == expectedResult) {
+            System.out.println("Subtraction test - PASSED");
+        } else {
+            System.out.println("Subtraction test - FAILED");
+        }
+    }
+
+    public static void testMultiplication() {
+        String expression = "6*2";
+        double expectedResult = 12.0;
+
+        String actualResult = Calculator.Run(expression);
+
+        if (Double.parseDouble(actualResult) == expectedResult) {
+            System.out.println("Multiplication test - PASSED");
+        } else {
+            System.out.println("Multiplication test - FAILED");
+        }
+    }
+
+    public static void testDivision() {
+        String expression = "15/3";
+        double expectedResult = 5.0;
+
+        String actualResult = Calculator.Run(expression);
+
+        if (Double.parseDouble(actualResult) == expectedResult) {
+            System.out.println("Division test - PASSED");
+        } else {
+            System.out.println("Division test - FAILED");
+        }
+    }
+}
