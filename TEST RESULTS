@@ -1,0 +1,13 @@
+*****Black Box test results:
+
+1. Atunci cand este introdus un singur numar, programul returneaza acelasi numar fara a genera un mesaj de eroare.
+
+2. In cazul introducerii unei functii aritmetice incomplete, cum ar fi "5 +", programul trece la linia urmatoare si asteapta continuarea functiei. De exemplu, "5 + 3", iar apoi returneaza rezultatul. Aplicatia nu genereaza un cod de eroare sau un mesaj care sa ofere utilizatorului mai multe informatii.
+
+3. In cazul in care se realizeaza o impartire la zero (de exemplu, "10/0"), ar trebui sa se genereze un mesaj de eroare specific, cum ar fi "Nu se poate realiza impartirea la zero", pentru a evita confuziile cu erorile de sistem.
+
+4. In cazul in care este introdusa gresit o operatie, cum ar fi "2++5", mesajul de eroare ar trebui sa fie clar si usor de inteles pentru utilizator.
+
+5. Programul genereaza rezultate incorecte in cazul expresiilor de forma "12.5/0x3". Daca inlocuim simbolul "*" cu "x", calculatorul nu identifica eroarea corect si omite partea "0x", efectuand direct impartirea "12.5/3".
+
+
